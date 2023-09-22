@@ -16,7 +16,7 @@ $(document).ready(function(){
         //alert(abecedario);
         alert(codigoUpper);
 
-        
+                
 
     })
 });
