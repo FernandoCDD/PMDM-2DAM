@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 1</title>
     <link rel="stylesheet" type="text/css" href="../Ejercicios/01. CifradoCesar.css">
+    <style type="text/css">
+        body{
+            text-align: center;
+            margin-top: 7%;
+        }
+    </style>
 </head>
 <body class="body">
 
@@ -18,22 +24,22 @@
                 <p id="text-intro"> Porfavor, introduzca un código</p>
             </div>
         </div>
-        <form class="needs-validation">
-            <div class="col-auto">
-                <textarea name="codigo" id="codigo" cols="30" rows="10" placeholder="Ingrese el código"></textarea>     
-                         
-            </div> <br>
-            <div class="col-auto">
-                <label for="numPosiciones">Número de posiciones</label> <br>
-                <input type="number" id="numPosiciones" min="1" max="20">
-            </div>
-            <div class="col-auto">
-                <br />
-                <button type="button" class="btn btn-success mb-3" id="botonCifrar">Cifrar</button>
-            </div>
-        </form>
-        <br>
-        <p id="resultado"></p>
+        <div class="formulario">
+            <form class="needs-validation">
+                <div class="col-auto">
+                    <textarea name="codigo" id="codigo" cols="30" rows="10" placeholder="Ingrese el código"></textarea>     
+                            
+                </div> <br>
+                <div class="col-auto">
+                    <label for="numPosiciones">Número de posiciones</label> <br>
+                    <input type="number" id="numPosiciones" min="1" max="20">
+                </div>
+                <div class="col-auto">
+                    <br />
+                    <button type="button" class="btn btn-success mb-3" id="botonCifrar">Cifrar</button>
+                </div>
+            </form>
+        </div>       
 
     </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
