@@ -9,7 +9,7 @@ $(document).ready(function(){
         var posiciones = $('#numPosiciones').val();
         var codigoUpper = codigo.toUpperCase();
 
-        alert(codigoCesar(codigoUpper, posiciones));
+        //$('#codigoCifrado').html('quiero escribir el codigo cifrado');
 
     })
 
@@ -24,8 +24,8 @@ $(document).ready(function(){
             if (caracterActual.match(/A-Z]/)){
 
                 var codAsci = caracterActual.charCodeAt(0);
-                var baseAlfabeto = 97;
-                var caracterCambiado = ((codAsci - baseAlfabeto + posiciones) % 26) + baseAlfabeto;
+         
+                var caracterCambiado = ((codAsci - 97 + posiciones) % 27) + baseAlfabeto;
 
                 caracterEncriptado = String.fromCharCode(caracterCambiado);
 
