@@ -1,12 +1,11 @@
 $(document).ready(function (){
+    
+   $(document).on('click', '#publicar', () =>{
 
     var numAleatorio = getRandomInt(9);
     var titulo = $('#titulo').val();
     var descripcion = $('#descripcion').val();
     var result= $('#result').val();
-
-       
-   $(document).on('click', '#publicar', () =>{
 
        if (titulo == ''){
         $('#titulo').addClass('is-invalid');

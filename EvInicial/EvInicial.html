@@ -21,26 +21,38 @@
             <div>
                 <form class="needs-validation">
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Título de la noticia</label>
-                        <input type="text" class="form-control" id="titulo">
+                        <label for="titulo" class="form-label">Título de la noticia</label>
+                        <input type="text" class="form-control" id="titulo" name="titulo">
+                        <div class="invalid-feedback">
+                            <p>Porfavor inserta un título</p>
+                        </div>
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">URL de la noticia</label>
-                        <input type="text" class="w-75" id="url"><button type="button"><i class="bi bi-list"
+                        <label for="slug" class="form-label">URL de la noticia</label>
+                        <input type="text" class="w-75" id="url" name="slug"><button type="button"><i class="bi bi-list"
                              style="font-size: 20px;" id="btnUrl"></i></button>
-                        
+                        <div class="invalid-feedback">
+                                <p>Porfavor inserta una URL</p>
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label for="descripcion"> Descripción de la noticia:</label> <br> <br>
                         <textarea name="texto" id="descripcion" cols="50" rows="5"></textarea>
+                        <div class="invalid-feedback">
+                            <p>Porfavor inserta una descripcion</p>
+                        </div>
                     </div>
 
                     <div class="p-4">
                         <p id="pregunta"></p>
                         <input type="number" name="result" id="result">
+                        <div class="invalid-feedback">
+                            <p>Porfavor inserta un resultado</p>
+                        </div>
                     </div>
                     
-                    <button type="submit" class="btn btn-primary" id="publicar">Enviar</button>
+                    
+                    <button type="button" class="btn btn-primary" id="publicar">Enviar</button>
                 </form>
             </div>
         </div>
