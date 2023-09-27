@@ -47,11 +47,11 @@
             <div class="card mb-2 border border-warning border-3">
               <img src="https://starwars-visualguide.com/assets/img/characters/3.jpg" alt="Darth Vader">
             </div>
-            <div class="bg-dark text-warning border border-warning" id="Arturito">
+            <div class="bg-dark text-warning border border-warning" id="Arturito" idPersonaje="0">
               <span class="ps-4">Arturito (R2-D2)</span><br>
               <span class="ps-4">Estatura: 0,96 m.</span><br>
               <span class="ps-4">Peso: 32 kg.</span>
-              <button type="button" class="btn btn-warning mt-2 mb-2 d-flex align-items-center mx-auto"
+              <button type="button" class="btn btn-warning mt-2 mb-2 d-flex align-items-center mx-auto masInfo"
                 data-bs-toggle="modal" data-bs-target="#exampleModal" style="justify-content: center;">
                 Mas información
               </button>
@@ -63,11 +63,11 @@
             <div class="card mb-2 border border-warning border-3">
               <img src="https://starwars-visualguide.com/assets/img/characters/10.jpg" alt="Darth Vader">
             </div>
-            <div class="bg-dark text-warning border border-warning" id="ObiWan">
+            <div class="bg-dark text-warning border border-warning" id="ObiWan" idPersonaje="1">
               <span class="ps-4">Obi-Wan Kenobi</span><br>
               <span class="ps-4">Estatura: 1,82 m.</span><br>
               <span class="ps-4">Peso: 77 kg.</span> <br>
-              <button type="button" class="btn btn-warning mt-2 mb-2 d-flex align-items-center mx-auto"
+              <button type="button" class="btn btn-warning mt-2 mb-2 d-flex align-items-center mx-auto masInfo"
                 data-bs-toggle="modal" data-bs-target="#btnKenobi" style="justify-content: center;">
                 Mas información
               </button>
@@ -79,11 +79,11 @@
             <div class="card mb-2 border border-warning border-3">
               <img src="https://starwars-visualguide.com/assets/img/characters/2.jpg" alt="Darth Vader">
             </div>
-            <div class="bg-dark text-warning border border-warning" id="C3PO">
+            <div class="bg-dark text-warning border border-warning" id="C3PO" idPersonaje="2">
               <span class="ps-4">C3PO</span><br>
               <span class="ps-4">Estatura: 1,67 m.</span><br>
               <span class="ps-4">Peso: 75 kg.</span>
-              <button type="button" class="btn btn-warning mt-2 mb-2 d-flex align-items-center mx-auto"
+              <button type="button" class="btn btn-warning mt-2 mb-2 d-flex align-items-center mx-auto masInfo"
                 data-bs-toggle="modal" data-bs-target="#c3po" style="justify-content: center;">
                 Mas información
               </button>
@@ -95,12 +95,12 @@
             <div class="card mb-2 border border-warning border-3">
               <img src="https://starwars-visualguide.com/assets/img/characters/4.jpg" alt="Darth Vader">
             </div>
-            <div class="bg-dark text-warning border border-warning" id="DarthVader">
+            <div class="bg-dark text-warning border border-warning" id="DarthVader" idPersonaje="3">
               <span class="ps-4">Nombre: Darth Vader.</span><br>
               <span class="ps-4">Estatura: 2,02 m.</span><br>
               <span class="ps-4">Peso: 136 kg.</span>
-              <button type="button" class="btn btn-warning mt-2 mb-2 d-flex align-items-center mx-auto"
-                data-bs-toggle="modal" data-bs-target="#btnKenobi" style="justify-content: center;">
+              <button type="button" class="btn btn-warning mt-2 mb-2 d-flex align-items-center mx-auto masInfo"
+                data-bs-toggle="modal" data-bs-target="#exampleModalLabel" style="justify-content: center;">
                 Mas información
               </button>
             </div>
@@ -109,38 +109,7 @@
       </div>
     </main>
 
-    <!-- <div class="modal fade" id="btnKenobi" tabindex="-1" aria-labelledby="btnKenobi" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Character Information</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <div class="row">
-              <div class="col-md-6">
-                <img src="ruta/a/la/foto.jpg" class="img-fluid" alt="Person's Photo">
-              </div>
-              <div class="col-md-6 text-light">
-                <p>Birth Year: 19BBY</p>
-                <p>Species: Unknown</p>
-                <p>Height: 172cm</p>
-                <p>Mass: 77kg</p>
-                <p>Gender: Male</p>
-                <p>Hair Color: Blond</p>
-                <p>Skin Color: Fair</p>
-                <p>Homeworld: Tatooine</p>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
+<!--     
     <div class="modal fade" id="c3po" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg">
           <div class="modal-content bg-dark">
@@ -153,7 +122,7 @@
                       <img src="https://starwars-visualguide.com/assets/img/characters/2.jpg" width="40%" height="40%"
                           alt="C3PO" class="mt-2 border border-3 border-warning">
                       <div>
-                          <p class="text-warning"> Cumpleaños: 112BBY <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cake" viewBox="0 0 16 16">
+                          <p class="text-warning"> Cumpleaños: 112BBY $('#') <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cake" viewBox="0 0 16 16">
                             <path d="m7.994.013-.595.79a.747.747 0 0 0 .101 1.01V4H5a2 2 0 0 0-2 2v3H2a2 2 0 0 0-2 2v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4a2 2 0 0 0-2-2h-1V6a2 2 0 0 0-2-2H8.5V1.806A.747.747 0 0 0 8.592.802l-.598-.79ZM4 6a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v.414a.911.911 0 0 1-.646-.268 1.914 1.914 0 0 0-2.708 0 .914.914 0 0 1-1.292 0 1.914 1.914 0 0 0-2.708 0A.911.911 0 0 1 4 6.414V6Zm0 1.414c.49 0 .98-.187 1.354-.56a.914.914 0 0 1 1.292 0c.748.747 1.96.747 2.708 0a.914.914 0 0 1 1.292 0c.374.373.864.56 1.354.56V9H4V7.414ZM1 11a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.793l-.354.354a.914.914 0 0 1-1.293 0 1.914 1.914 0 0 0-2.707 0 .914.914 0 0 1-1.292 0 1.914 1.914 0 0 0-2.708 0 .914.914 0 0 1-1.292 0 1.914 1.914 0 0 0-2.708 0 .914.914 0 0 1-1.292 0L1 11.793V11Zm11.646 1.854a1.915 1.915 0 0 0 2.354.279V15H1v-1.867c.737.452 1.715.36 2.354-.28a.914.914 0 0 1 1.292 0c.748.748 1.96.748 2.708 0a.914.914 0 0 1 1.292 0c.748.748 1.96.748 2.707 0a.914.914 0 0 1 1.293 0Z"/>
                           </svg></p>
                           <hr>
@@ -190,18 +159,17 @@
                   </div>           
               </div>
               <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                  <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
               </div>
           </div>
       </div>
-  </div>
+  </div> -->
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-        
+      <script src="ListaStarWars.js"></script>
 </body>
 </html>
