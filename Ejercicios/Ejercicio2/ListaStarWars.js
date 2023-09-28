@@ -71,6 +71,8 @@ $(document).ready(function(){
 
     $(document).on('click', '[data-bs-target="#masInfo"]', function(){
 
+        //  
+        //ID
         var personajeId = $(this).attr('idPersonaje');
     
         $.ajax({
