@@ -1,0 +1,103 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<div class="container">
+        <div class="row centered-form">
+        <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+        	<div class="panel panel-default">
+        		<div class="panel-heading">
+			    		<h3 class="panel-title">Formulario de Registro</h3>
+			 			</div>
+			 			<div class="panel-body">
+			    		
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+                                        
+			                            <input [(ngModel)]="nombre" id="first_name" type="text" name="first_name" class="form-control input-sm" placeholder="Nombre">
+			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+                                        
+			    						<input [(ngModel)]="apellidos" type="text" name="last_name" id="last_name" class="form-control input-sm" placeholder="Apellidos">
+			    					</div>
+			    				</div>
+			    			</div>
+
+			    			<div class="form-group">
+                                
+			    				<input [(ngModel)]="email" type="email" name="email" id="email" class="form-control input-sm" placeholder="Email">
+			    			</div>
+
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+                                    
+			    						<input [(ngModel)]="contrasena" type="password" name="password" id="password" class="form-control input-sm" placeholder="Contraseña">
+			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input [(ngModel)]="repetirContrasena" type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Repetir contraseña">
+			    					</div>
+			    				</div>
+			    			</div>
+			    			
+                            <div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input [(ngModel)]="dni" type="text" name="DNI" id="DNI" class="form-control input-sm" placeholder="DNI">
+			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input [(ngModel)]="telefono" type="number" name="numTelefono" id="numTelefono" class="form-control input-sm" placeholder="Teléfono">
+			    					</div>
+			    				</div>
+			    			</div>
+
+                            <div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<select id="conoce" class="form-control">
+                                            <option selected>¿Por qué nos conoces?</option>
+                                            <option>Buscando en Google</option>
+                                            <option>Por mi profesor</option>
+                                            <option>A través de un amigo</option>
+                                          </select>
+			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<select [(ngModel)]="sexo" id="sexo" class="form-control">
+                                            <option selected>Sexo</option>
+                                            <option value="Hombre"> Hombre </option>
+                                            <option value="Mujer"> Mujer </option>
+                                          </select>
+			    					</div>
+			    				</div>
+			    			</div>
+                            <div class="row p-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                    Acepto las condiciones de Luismi
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                    Acepto las condiciones de Miguel
+                                    </label>
+                                </div>
+
+			    			<input type="submit" value="Registrase" class="btn btn-info btn-block mt-3" (click)="validarFormulario()">
+                            </div>
+			    		
+			    	</div>
+	    		</div>
+    		</div>
+    	</div>
+    </div>
