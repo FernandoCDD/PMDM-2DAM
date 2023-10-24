@@ -1,0 +1,16 @@
+<div class="container align-items-center p-3" style="justify-content: center;" id="ListaStarWars">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card mb-2 border border-warning border-3">
+                <img [src]="getPersonajeImage()" alt="Darth Vader">
+            </div>
+            <div class="bg-dark text-warning border border-warning">
+                <span class="ps-4">{{personaje.name}}</span><br>
+                <button type="button" (click)="verDetalles()" class="btn btn-warning mt-2 mb-2 d-flex align-items-center mx-auto"
+                    data-bs-toggle="modal" style="justify-content: center;">
+                    Mas información
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
