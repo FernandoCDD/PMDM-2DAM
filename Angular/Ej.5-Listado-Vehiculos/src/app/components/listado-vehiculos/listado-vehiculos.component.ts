@@ -225,7 +225,7 @@ export class ListadoVehiculosComponent {
   listadoVehiculos = VEHICULOS;
 }
 
-function getFoto (){
+getFoto (){
 
   VEHICULOS.forEach(element => {
       var arrayId =  element.url.split('');
