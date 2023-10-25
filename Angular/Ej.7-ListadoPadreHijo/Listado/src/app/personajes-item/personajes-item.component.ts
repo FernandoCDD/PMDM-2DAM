@@ -21,6 +21,6 @@ export class PersonajesItemComponent {
 
   verDetalles(){
     
-    this.personajeClick.emit()
+    this.personajeClick.emit(this.personaje.name)
   }
 }
