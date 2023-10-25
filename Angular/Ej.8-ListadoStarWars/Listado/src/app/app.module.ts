@@ -2,14 +2,14 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { PersonajesListComponent } from './personajes-list/personajes-list.component';
-import { PersonajesItemComponent } from './personajes-item/personajes-item.component';
+import { PersonajeListComponent } from './personaje-list/personaje-list.component';
+import { PersonajeItemComponent } from './personaje-item/personaje-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PersonajesListComponent,
-    PersonajesItemComponent
+    PersonajeListComponent,
+    PersonajeItemComponent
   ],
   imports: [
     BrowserModule
