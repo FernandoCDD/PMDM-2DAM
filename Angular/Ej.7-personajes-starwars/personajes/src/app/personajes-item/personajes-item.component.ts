@@ -15,7 +15,13 @@ export class PersonajesItemComponent {
     return `https://starwars-visualguide.com/assets/img/characters/${id}.jpg`;
   }
 
+  getPersonajeId(){
+    const id = this.personaje.url.split('/')[5];
+    console.log(id)
+    return id;
+  }
+
   verDetalles(){
-    this.personajeClick.emit()
+    this.personajeClick.emit(this.getPersonajeId());
   }
 }

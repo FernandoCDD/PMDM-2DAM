@@ -1,23 +1,41 @@
 <ng-template #ModalPersonaje let-modal>
-    <div class="modal-header">
-      <h4 class="modal-title" id="modal-basic-title">Perfil de Personaje</h4>
-      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
-    </div>
-    <div class="modal-body">
-      <form>
-        <div class="mb-3">
-          <label for="dateOfBirth">Date of birth</label>
-          <p></p>
-        </div>
-      </form>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
-    </div>
-  </ng-template>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Perfil de Personaje</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="mb-3">
+        <label for="dateOfBirth"><span class="fw-bold">Nombre</span>
+          <p>{{personDetails.name}}</p>
+        </label>
+      </div>
+      <div class="mb-3">
+        <label for="height"><span class="fw-bold">Altura</span>
+          <p>{{personDetails.height}} cm</p>
+        </label>
+      </div>
+      <div class="mb-3">
+        <label for="mass"><span class="fw-bold">Peso</span>
+          <p>{{personDetails.mass}} kg</p>
+        </label>
+      </div>
+      <div class="mb-3">
+        <label for="gender"><span class="fw-bold">Género</span>
+          <p>{{personDetails.gender}}</p>
+        </label>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+  </div>
+</ng-template>
 
-<div class="container align-items-center p-3" style="justify-content: center; background-image: url(https://media.istockphoto.com/id/472809828/es/foto/espacio-profundo.jpg?s=612x612&w=0&k=20&c=pVxXmZrGqIBqd2QjNHqZupJco0mWNagCv9g8TtQSmEU=);">
-    <div class="row">
-            <app-personajes-item class="col-3 mt-4" *ngFor="let p of listadoPersonajes" [personaje]="p"></app-personajes-item>
-    </div>
+<div class="container align-items-center p-3"
+  style="justify-content: center; background-image: url(https://media.istockphoto.com/id/472809828/es/foto/espacio-profundo.jpg?s=612x612&w=0&k=20&c=pVxXmZrGqIBqd2QjNHqZupJco0mWNagCv9g8TtQSmEU=);">
+  <div class="row">
+    <app-personajes-item class="col-3 mt-4" *ngFor="let p of listadoPersonajes" [personaje]="p"
+      (personajeClick)="verDetalles($event, ModalPersonaje)"></app-personajes-item>
+  </div>
 </div>
