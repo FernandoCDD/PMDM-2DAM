@@ -17,9 +17,14 @@ export class PersonajesListComponent implements OnInit{
   constructor (private personajeServicio: PersonajeServicio, private modalService: NgbModal){}
 
   ngOnInit(): void {
-    this.personajeServicio.getPersonajeList().subscribe
+    this.personajeServicio.getPersonajeList().subscribe(respuesta => 
+      this.listadoPersonajes = respuesta.results);
   }
 
+  verDetalles(id: string, modal: any){
+
+    
+  }
 
 
 }

@@ -19,4 +19,8 @@ export class PersonajesService{
     getPersonajeById(id: string): Observable<PersonDetailsResponse>{
       return this.http.get<PersonDetailsResponse>('https://swapi.dev/api/people/'+id);
     }
+
+    getListByPag(page: number): Observable<PersonajesListResponse>{
+      return this.http.get<PersonajesListResponse>('https://swapi.dev/api/people/?page='+page);
+    }
 }

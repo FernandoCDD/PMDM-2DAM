@@ -13,6 +13,9 @@ export class PersonajesListComponent implements OnInit{
 
     listadoPersonajes: Personajes[] = [];
     personDetails!: PersonDetailsResponse;
+    page = 1;
+    count = 1;
+    pageSize = 20;
 
     constructor(private personajesService: PersonajesService, private modalService: NgbModal){}
    
@@ -26,6 +29,13 @@ export class PersonajesListComponent implements OnInit{
     ngOnInit(): void {
         this.personajesService.getPersonajesList().subscribe(respuesta => {
             this.listadoPersonajes = respuesta.results;
+            this.count = respuesta.count;
+        })
+    }
+
+    cambiarPagina(){
+        this.personajesService.getListByPag(this.page).subscribe(resp => {
+            this.listadoPersonajes = resp.results;
         })
     }
 }
