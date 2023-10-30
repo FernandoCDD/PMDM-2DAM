@@ -1,0 +1,7 @@
+<div class="container align-items-center p-3">
+  <div class="row">
+    <app-berries-item class="col-3 mt-4" *ngFor="let b of BerriesList" [berry]="b"></app-berries-item>
+  </div>
+
+  <ngb-pagination class="d-flex justify-content-center mt-5" [collectionSize]="count" [(page)]="page" [maxSize]="5" (pageChange)="changePage()" [pageSize]="pageSize"></ngb-pagination>
+</div>
