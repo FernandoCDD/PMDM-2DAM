@@ -1,0 +1,36 @@
+<ng-template #ModalMovies let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Perfil de Personaje</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="mb-3">
+        <label for="dateOfBirth"><span class="fw-bold">Nombre</span>
+          <p>{{movieDetails.title}}</p>
+        </label>
+      </div>
+      <div class="mb-3">
+        <label for="height"><span class="fw-bold">Presupuesto</span>
+          <p>{{movieDetails.budget}} cm</p>
+        </label>
+      </div>
+      <div class="mb-3">
+        <label for="mass"><span class="fw-bold">Descripción</span>
+          <p>{{movieDetails.overview}} kg</p>
+        </label>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+  </div>
+</ng-template>
+
+<div class="container align-items-center p-3">
+  <h1 class=""> Most Popular List </h1>
+  <ul class="list-group list-group-horizontal position-relative overflow-auto w-100">
+    <app-movie-item-component class="col-3 mt-4" *ngFor="let m of movieList" [movie]="m"
+    (movieClick)="verDetalles($event, ModalMovies)"></app-movie-item-component>
+  </ul>
+</div>
