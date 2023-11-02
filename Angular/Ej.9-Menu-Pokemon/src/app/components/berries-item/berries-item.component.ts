@@ -11,8 +11,8 @@ export class BerriesItemComponent {
   @Input() berry!: Berries;
 
   getBerryImage(){
-
-    const id = this.berry.url.split('/')[6];
-    return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
+    return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/${this.berry.name}-berry.png`;
+    
   }
+
 }

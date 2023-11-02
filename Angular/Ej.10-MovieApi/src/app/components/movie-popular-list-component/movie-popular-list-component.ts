@@ -13,9 +13,6 @@ export class MoviePopularListComponent implements OnInit{
 
   movieList: Movies[] = [];
   movieDetails!: MovieDetailsResponse;
-  page = 1;
-  count = 1;
-  pageSize = 20;
 
   constructor(private movieService: MovieService, private modalService: NgbModal){}
 
@@ -30,7 +27,6 @@ export class MoviePopularListComponent implements OnInit{
   ngOnInit(): void {
     this.movieService.getMostPopularList().subscribe(respuesta =>{
       this.movieList = respuesta.results;
-      this.page =respuesta.page;
     })
   }
 

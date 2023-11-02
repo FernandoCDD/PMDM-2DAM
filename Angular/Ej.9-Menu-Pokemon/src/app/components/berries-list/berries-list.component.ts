@@ -23,9 +23,4 @@ export class BerriesListComponent implements OnInit{
     })
   }
 
-  changePage(){
-    this.berriesService.getListByPag(this.page).subscribe(result => {
-        this.BerriesList = result.results;
-    })
-}
 }
