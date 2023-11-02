@@ -1,0 +1,12 @@
+.nav{
+    display: flex;
+    justify-content: center;
+}
+
+.nav a{
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: xx-large;
+}
