@@ -39,5 +39,6 @@
       (personajeClick)="verDetalles($event, ModalPersonaje)"></app-personajes-item>
   </div>
 
-  <ngb-pagination class="d-flex justify-content-center mt-5" [collectionSize]="count" [(page)]="page" [maxSize]="5" (pageChange)="cambiarPagina()" [pageSize]="pageSize"></ngb-pagination>
+  <ngb-pagination class="d-flex justify-content-center mt-5"
+   [collectionSize]="count" [(page)]="page" [maxSize]="5" (pageChange)="cambiarPagina()" [pageSize]="pageSize"></ngb-pagination>
 </div>

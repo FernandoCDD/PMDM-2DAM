@@ -9,7 +9,6 @@ import { MoviePopularListComponent } from './components/movie-popular-list-compo
 import { PageHomeComponent } from './ui/page-home-component/page-home-component.component';
 import { MovieTopRatedListComponent } from './components/movie-top-rated-list/movie-top-rated-list.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,

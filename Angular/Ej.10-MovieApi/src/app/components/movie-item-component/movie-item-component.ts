@@ -20,7 +20,7 @@ export class MovieItemComponent {
   }
   
   viewDetails(){
-    this.movieClick.emit (this.movie.id);
+    this.movieClick.emit(this.movie.id);
   }
   
 } 

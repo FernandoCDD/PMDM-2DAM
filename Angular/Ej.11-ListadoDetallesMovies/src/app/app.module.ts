@@ -7,13 +7,15 @@ import { MovieListComponent } from './components/movie-list/movie-list.component
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MovieItemComponent,
     MovieListComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    MovieDetailsComponent
   ],
   imports: [
     BrowserModule,
