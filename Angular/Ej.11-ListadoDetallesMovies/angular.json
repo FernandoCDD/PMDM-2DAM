@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "autocomplete": {
+    "Ej.11-ListadoDetallesMovies": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/autocomplete",
+            "outputPath": "dist/ej.11-listado-detalles-movies",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -26,7 +26,6 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -62,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "autocomplete:build:production"
+              "browserTarget": "Ej.11-ListadoDetallesMovies:build:production"
             },
             "development": {
-              "browserTarget": "autocomplete:build:development"
+              "browserTarget": "Ej.11-ListadoDetallesMovies:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -73,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "autocomplete:build"
+            "browserTarget": "Ej.11-ListadoDetallesMovies:build"
           }
         },
         "test": {
@@ -89,7 +88,6 @@
               "src/assets"
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -99,6 +97,6 @@
     }
   },
   "cli": {
-    "analytics": "ba8d72d0-7267-4bb4-a889-f906caeb6f5f"
+    "analytics": "f2b6986e-be30-4ce2-bd09-55b5473e726c"
   }
 }

@@ -1,14 +1,14 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Movies } from 'src/app/models/movies-list/movies-list.interface';
+import { Movie } from 'src/app/models/movie-list/movie-list.interface';
 
 @Component({
-  selector: 'app-movie-item-component',
-  templateUrl: './movie-item-component.html',
-  styleUrls: ['./movie-item-component.component.css']
+  selector: 'app-movie-item',
+  templateUrl: './movie-item.component.html',
+  styleUrls: ['./movie-item.component.css']
 })
 export class MovieItemComponent {
 
-  @Input() movie!: Movies;
+  @Input() movie!: Movie;
   @Output() movieClick = new EventEmitter <number>
 
   getMovieImage(){
@@ -18,9 +18,9 @@ export class MovieItemComponent {
   getMovieId(){
     return this.movie.id;
   }
-  
+
   viewDetails(){
     this.movieClick.emit(this.movie.id);
   }
   
-} 
+}
