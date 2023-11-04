@@ -16,6 +16,10 @@ export class MovieService {
     return this.http.get<MovieListResponse>('https://api.themoviedb.org/3/movie/popular?api_key=02bd87fa25457bdbc212118905ab3ec0');
   }
 
+  getMostRatedList(): Observable<MovieListResponse>{
+    return this.http.get<MovieListResponse>('https://api.themoviedb.org/3/movie/top_rated?api_key=02bd87fa25457bdbc212118905ab3ec0');
+  }
+
   getMovieById(id: number){
     return this.http.get<MovieDetailsResponse>(`https://api.themoviedb.org/3/movie/${id}?api_key=02bd87fa25457bdbc212118905ab3ec0`);
   }
