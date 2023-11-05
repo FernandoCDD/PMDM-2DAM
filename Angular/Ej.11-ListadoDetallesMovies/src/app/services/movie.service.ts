@@ -12,10 +12,6 @@ export class MovieService {
 
   constructor(private http: HttpClient) { }
  
-  getMostPopularList(): Observable<MovieListResponse>{
-    return this.http.get<MovieListResponse>(`https://api.themoviedb.org/3/movie/popular?api_key=02bd87fa25457bdbc212118905ab3ec0`);
-  }
-
   getListByPag(page: number): Observable<MovieListResponse>{
     return this.http.get<MovieListResponse>(`https://api.themoviedb.org/3/movie/popular?api_key=02bd87fa25457bdbc212118905ab3ec0&&page=${page}`);
   }

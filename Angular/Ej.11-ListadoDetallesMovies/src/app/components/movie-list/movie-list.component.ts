@@ -18,7 +18,7 @@ export class MovieListComponent implements OnInit{
 
   ngOnInit(): void {
     
-    this.movieService.getMostPopularList().subscribe(resp =>{
+    this.movieService.getListByPag(this.page).subscribe(resp =>{
       this.movieList = resp.results;
       this.page = resp.page
     })

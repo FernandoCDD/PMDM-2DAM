@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { Movie } from 'src/app/models/movie-list/movie-list.interface';
 
 @Component({
@@ -13,14 +14,6 @@ export class MovieItemComponent {
 
   getMovieImage(){
     return 'https://image.tmdb.org/t/p/w500/'+this.movie.poster_path;
-  }
-
-  getMovieId(){
-    return this.movie.id;
-  }
-
-  viewDetails(){
-    this.movieClick.emit(this.movie.id);
   }
   
 }

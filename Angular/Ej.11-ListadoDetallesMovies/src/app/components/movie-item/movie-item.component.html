@@ -1,4 +1,4 @@
-<div class="card shadow-sm mb-2 border border-dark border-3">
-    <img [src]="getMovieImage()"  (click)="viewDetails()">
+<div class="card shadow-sm mb-2 border border-dark border-3" [routerLink]="['/details', movie.id]">
+    <img [src]="getMovieImage()">
 </div>
 
