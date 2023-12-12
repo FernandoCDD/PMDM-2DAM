@@ -1,0 +1,25 @@
+[debug] [2023-12-12T19:36:34.082Z] ----------------------------------------------------------------------
+[debug] [2023-12-12T19:36:34.084Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ferna\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-12-12T19:36:34.085Z] CLI Version:   13.0.1
+[debug] [2023-12-12T19:36:34.085Z] Platform:      win32
+[debug] [2023-12-12T19:36:34.085Z] Node Version:  v18.18.0
+[debug] [2023-12-12T19:36:34.086Z] Time:          Tue Dec 12 2023 20:36:34 GMT+0100 (hora estándar de Europa central)
+[debug] [2023-12-12T19:36:34.087Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-12T19:36:34.164Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-12T19:36:34.165Z] > authorizing via signed-in user (fernandocdd02@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\ferna\OneDrive\Escritorio\2ºDAM\PMDMFer\Angular\ProyectoCursoAngularFirebase
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
