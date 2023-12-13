@@ -2,8 +2,9 @@
   "database": {
     "rules": "database.rules.json"
   },
+
   "hosting": {
-    "public": "dist/proyecto-curso-angular-firebase",
+    "public": "dist/proyecto-curso-angular-firebase/browser",
     "ignore": [
       "firebase.json",
       "**/.*",
