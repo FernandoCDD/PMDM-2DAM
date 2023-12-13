@@ -9,5 +9,6 @@ export const environment = {
         messagingSenderId: '659735993899',
         appId: '1:659735993899:web:5e0a0891a43d61576b546e',
         measurementId: 'G-BHGC0F86P1'
-    }
+    },
+    title: 'ProyectoCursoAngularFirebase'
 };
