@@ -7,9 +7,9 @@ import { map } from 'rxjs';
 })
 export class AuthService {
 
-  constructor(private auth: AngularFireAuth) { }
+  constructor(private authService: AngularFireAuth) { }
 
-  user = this.auth.authState.pipe(map(authState =>{
+  user = this.authService.authState.pipe(map(authState =>{
     console.log('AuthaState', authState)
     if(authState)
       return authState
@@ -23,6 +23,7 @@ export class AuthService {
 
   glogin(){
     console.log('Google Login!')
+    
   }
 
   logout(){

@@ -6,12 +6,13 @@ import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = environment.title;
-
-  constructor (public auth: AuthService){}
+  email =! '';
+  password = '';
+  constructor(public auth: AuthService) { }
+  
 }
