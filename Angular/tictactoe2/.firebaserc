@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "tictactoe-b3692": {
+      "hosting": {
+        "tictactoe2": [
+          "tictactoe-b3692"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "tictactoe-b3692"
+  }
+}
