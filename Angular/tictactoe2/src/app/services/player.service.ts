@@ -18,13 +18,3 @@ export class PlayerService {
   }
 }
 
-/*
-async createUser(name: string, age: number) {
-    const docRef = await addDoc(collection(this.firestore, COLLECTION_USERS), {
-      name: name,
-      age: age,
-    });
-    console.log('Document written with ID: ', docRef.id);
-  }
-
-*/
