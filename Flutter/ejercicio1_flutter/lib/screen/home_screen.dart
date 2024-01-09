@@ -6,13 +6,11 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Path'),
-      ),
       body: Container(
         alignment: Alignment.center,
         color: Colors.red,
-        child: ,
+        child: Image.asset('assets/images/path_logo.png')
+    
         ),
     );
   }
