@@ -58,8 +58,12 @@ class HomeScreen extends StatelessWidget {
               "Already have a Path account?",
               style: TextStyle(
                 color: Color.fromARGB(255, 228, 149, 149),
-                fontSize: 20
+                fontSize: 17
               ),
+            ),
+
+            const SizedBox(
+              height: 15,
             ),
 
             ElevatedButton(
@@ -85,6 +89,49 @@ class HomeScreen extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
+            
+            SizedBox(
+              width: 250,
+              child:  RichText(
+              textAlign: TextAlign.center,
+              text: const TextSpan(
+                children: [
+                  TextSpan(
+                    text: 'By using Path, you agree to Path`s ',
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 228, 149, 149),
+                      fontSize: 15
+                    )
+                  ),
+                  TextSpan(
+                    text: 'Terms of Use',
+                    style: TextStyle(
+                      color: Colors.white,
+                      decoration: TextDecoration.underline,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15
+                    ),              
+                  ),
+                  TextSpan(
+                    text: ' and',
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 228, 149, 149)
+                    )
+                  ),
+                  TextSpan(
+                    text: ' Privacy Policy.',
+                    style: TextStyle(
+                      color: Colors.white,
+                      decoration: TextDecoration.underline,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15
+                    ),              
+                  ),
+
+                ]     
+              ),
+            ),
+            )
         ],    
       ),  
     );
