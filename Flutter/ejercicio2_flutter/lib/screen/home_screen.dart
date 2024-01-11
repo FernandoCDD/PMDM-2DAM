@@ -1,3 +1,4 @@
+import 'package:ejercicio2_flutter/widget/foodcard.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -5,44 +6,37 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: const Text('Título', style: TextStyle(
-          color: Colors.white,
-          fontWeight: FontWeight.bold
-        ),),
-        backgroundColor: Colors.lightBlue[600]
-      ),
-      body: ListView(
-        children: [
-          SizedBox(
-            height: 300,
-            child: Card(
-              color: Colors.blue[100],
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-              margin: const EdgeInsets.all(25),
-              elevation: 10,
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(30),
-                child: Column(
-                  children:[
-                    Container(
-                      padding: const EdgeInsets.only(right: 205, top: 10),
-                      child: const Text('Tortilla de Patatas',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold
-                      ),),
-                      Ratingz
-                    ),                 
-                    Image.network('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzQUtYTfxp_QXaNXVoIAp4e0u_NX7VLlQYPw&usqp=CAU',),                         
-                  ],
-                ),
-              ),
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Food Cards'),
+          centerTitle: true,
+        ),
+        body: ListView(
+          children: const[
+            FoodCard(
+              urlImagen: 'https://play-lh.googleusercontent.com/hSRuCp9qVkxNYLYibPYyra4bQLYDyHg40TA1Cu6i9Z3HsWEgS1q076VfjacAdQquHw',
+              nombre: 'McDonalds',
+              valoracion: 3.5,
+              direccion: 'Calle de la piruleta, 69',
+              precio: 6.2
             ),
-          )
-        ], 
+            FoodCard(
+              urlImagen: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/KFC_Logo.svg/2560px-KFC_Logo.svg.png',
+              nombre: 'KFC',
+              valoracion: 3.7,
+              direccion: 'Mi tía de Almería, 123',
+              precio: 7.1,
+            ),   
+            FoodCard(
+              urlImagen: 'https://www.tattooniedesign.com/cdn/shop/products/Capturadepantalla2023-01-31alas18.22.31_1024x1024.png?v=1675185776',
+              nombre: 'Doner Kebab',
+              valoracion: 2.7,
+              direccion: 'Calle Calvicie, 3',
+              precio: 4.5,
+            ),           
+          ],
+        ),
       ),
     );
   }
