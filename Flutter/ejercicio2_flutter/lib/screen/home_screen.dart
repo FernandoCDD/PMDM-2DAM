@@ -37,6 +37,44 @@ class HomeScreen extends StatelessWidget {
             ),           
           ],
         ),
+        bottomNavigationBar: Container(
+          child: const Row(
+            children: [
+              Column(
+                children: [
+                  Icon(
+                    Icons.home
+                  ),
+                  Text('Home')
+                ],
+              ),
+              Column(
+                children: [
+                  Icon(
+                    Icons.camera_alt
+                  ),
+                  Text('Booking')
+                ],
+              ),
+              Column(
+                children: [
+                  Icon(
+                    Icons.list
+                  ),
+                  Text('Lists')
+                ],
+              ),
+              Column(
+                children: [
+                  Icon(
+                    Icons.person
+                  ),
+                  Text('Profile')
+                ],
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
