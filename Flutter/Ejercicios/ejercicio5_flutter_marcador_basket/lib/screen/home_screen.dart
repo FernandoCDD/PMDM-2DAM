@@ -1,3 +1,4 @@
+import 'package:ejercicio5_flutter_marcador_basket/widgets/basket_card.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -5,6 +6,6 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const BasketCard();
   }
 }
