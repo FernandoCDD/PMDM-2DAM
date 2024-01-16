@@ -1,6 +1,7 @@
+import 'package:ejercicio6_flutter_card_details/screen/car_detail_screen.dart';
 import 'package:flutter/material.dart';
 
-class CarDetailScreen extends StatelessWidget {
+class CarDetailCard extends StatelessWidget {
   final String urlImagen;
   final int numPuertas = 0;
   final String marca;
@@ -10,16 +11,16 @@ class CarDetailScreen extends StatelessWidget {
   final int numPersonas;
   final double precio;
 
-  const CarDetailScreen(
-      {super.key,
-      required this.urlImagen,
-      required this.marca,
-      required this.modelo,
-      required this.combustible,
-      required this.tipoMarchas,
-      required this.numPersonas,
-      required this.precio,
-      });
+  const CarDetailCard({
+    super.key,
+    required this.urlImagen,
+    required this.marca,
+    required this.modelo,
+    required this.combustible,
+    required this.tipoMarchas,
+    required this.numPersonas,
+    required this.precio,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -47,65 +48,69 @@ class CarDetailScreen extends StatelessWidget {
                   )
                 ],
               ),
-
               Center(
                   child: Image.network(
                 urlImagen,
                 height: 170,
               )),
-
               Text(
                 '$marca $modelo',
                 style: const TextStyle(
                   fontWeight: FontWeight.bold,
                 ),
               ),
-
-              Text('$numPuertas · $combustible', style: const TextStyle(
-                color: Color.fromARGB(255, 136, 136, 136)
-              ),),
-              
-
+              Text(
+                '$numPuertas · $combustible',
+                style:
+                    const TextStyle(color: Color.fromARGB(255, 136, 136, 136)),
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Padding(padding: EdgeInsets.only(left: 15)),
-                  Image.network('assests/icons/controles-de-marcha-de-conduccion.png', height: 25),
+                  Image.network(
+                      'assests/icons/controles-de-marcha-de-conduccion.png',
+                      height: 25),
                   const Padding(padding: EdgeInsets.only(left: 10)),
                   Text(tipoMarchas),
-
                   const Padding(padding: EdgeInsets.only(left: 15)),
                   const Icon(Icons.person),
                   const Padding(padding: EdgeInsets.only(left: 10)),
                   Text('$numPersonas'),
-
                   const Padding(padding: EdgeInsets.only(left: 15)),
                   const Icon(Icons.severe_cold_sharp),
                   const Padding(padding: EdgeInsets.only(left: 10)),
                   const Text('Yes')
-                ],              
+                ],
               ),
-
               const Divider(),
-
               Row(
                 children: [
                   const Padding(padding: EdgeInsets.only(left: 10)),
-                  Text('$precio€', style: const TextStyle(color: Colors.blue, fontSize: 23)),
-
-                  const Padding(padding: EdgeInsets.only(left: 260)),
-
-                  const InkWell(
-                    child: Text('Seleccionar', style: TextStyle(
-                      color: Colors.blue,
-                      fontSize: 20,
-                      decoration: TextDecoration.underline, decorationColor: Colors.blue
-                    ),),
-                    
-                  )
+                  Text('$precio€',
+                      style: const TextStyle(color: Colors.blue, fontSize: 23)),
+                  const Padding(padding: EdgeInsets.only(left: 240)),
+                  TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => CarDetailScreen(
+                              urlImagen: urlImagen,
+                              marca: marca,
+                              modeloFranPutero: modelo,
+                            ),
+                          ),
+                        );
+                      },
+                      child: const Text(
+                        'SELECCIONAR',
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 97, 176, 250),
+                            fontSize: 14),
+                      ))
                 ],
               )
-              
             ],
           ),
         ),
@@ -113,29 +118,3 @@ class CarDetailScreen extends StatelessWidget {
     );
   }
 }
-
-/*
-appBar: AppBar(
-          flexibleSpace: Stack(
-            children: [
-              Positioned.fill(
-                child: Image.network('https://static.eldiario.es/clip/ac5016f6-7afd-43f8-9d87-f38c82e5a9f1_16-9-discover-aspect-ratio_default_0.jpg',
-                fit: BoxFit.cover
-                )
-              ),                   
-            ],
-          ),
-        ),
-*/
-
-/*
-const CarDetailScreen(
-      urlImagen: "https://admin.mallorcar.com/uploads/fleets/fleet_17_1668006061.png",
-      marca:"Toyota",
-      modelo: "Auris",
-      combustible: "Gasolina",
-      tipoMarchas: "Manual",
-      numPersonas: 5, 
-      precio: 21.600
-      );
-*/
