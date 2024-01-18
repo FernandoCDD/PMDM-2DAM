@@ -64,7 +64,7 @@ class HomeScreen extends StatelessWidget {
                 urlImagen:
                     "https://admin.mallorcar.com/uploads/fleets/fleet_17_1668006061.png",
                 marca: "Toyota",
-                modelo: "Auris",
+                modelo: "Pollon",
                 combustible: "Gasolina",
                 tipoMarchas: "Manual",
                 numPersonas: 5,
