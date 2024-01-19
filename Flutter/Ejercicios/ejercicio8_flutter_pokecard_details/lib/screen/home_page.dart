@@ -1,35 +1,24 @@
-import 'package:ejercicio6_flutter_pokecard_api_get/widgets/pokemon_widget.dart';
+import 'package:ejercicio6_flutter_pokecard_api_get/models/character_response/pokemon_list_response/pokemon_list_response.dart';
 import 'package:flutter/material.dart';
+import 'package:skeletonizer/skeletonizer.dart';
 
-void main() {
-  runApp(
-    HomePageScreen(
-      pokemons: List<PokemonWidget>.generate(10, (i) => 'Item $i'),
-    ),
-  );
+class HomePageScreen extends StatefulWidget {
+  final List<PokemonListResponse> pokemonList;
+  const HomePageScreen({super.key, required this.pokemonList});
+
+  @override
+  State<HomePageScreen> createState() => _HomePageScreenState();
 }
-class HomePageScreen extends StatelessWidget {
-  final List<PokemonWidget> pokemons;
-  const HomePageScreen({super.key, required this.pokemons});
 
+class _HomePageScreenState extends State<HomePageScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("Pokemones"),
+          title: const Text("Pokemon List"),
         ),
-      body: ListView.builder(
-        itemCount: .length,
-        prototypeItem: ListTile(
-          title: Text(items.first),
-        ),
-        itemBuilder: (context, items){
-          return ListTile(
-            
-          )
-        }
-      ),
+        body: Skeletonizer(),
       ),
     );
   }
