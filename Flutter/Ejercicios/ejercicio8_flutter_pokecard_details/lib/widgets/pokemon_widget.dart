@@ -40,7 +40,7 @@ class _PokemonWidgetState extends State<PokemonWidget> {
         future: pokemonList,
         builder: (context, snapshot) {
           if (snapshot.hasData) {
-            return HomePageScreen(pokemonList: snapshot.data!.results!);
+            return HomePageScreen(pokemonList: snapshot.data!.results);
           } else if (snapshot.hasError) {
             return Text('${snapshot.error}');
           }
