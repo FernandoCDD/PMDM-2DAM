@@ -1,6 +1,8 @@
+
 import 'package:flutter/material.dart';
 
 class HomeScreenPage extends StatefulWidget {
+
   const HomeScreenPage({super.key});
 
   @override
@@ -12,10 +14,7 @@ class _HomeScreenPageState extends State<HomeScreenPage> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Movies',
-      style: optionStyle,
-    ),
+    
     Text(
       'Actor',
       style: optionStyle,
