@@ -1,40 +1,41 @@
 import 'dart:convert';
+
 import 'package:ejercicio10_flutter_listas_moviedb/model/actor_list/actor_list_response/result.dart';
 
 class ActorListResponse {
   int? page;
-  List<ActorsResult>? actorsResults;
+  List<ActorResult>? actorResults;
   int? totalPages;
-  int? totalActorsResults;
+  int? totalActorResults;
 
   ActorListResponse({
     this.page,
-    this.actorsResults,
+    this.actorResults,
     this.totalPages,
-    this.totalActorsResults,
+    this.totalActorResults,
   });
 
   factory ActorListResponse.fromMap(Map<String, dynamic> data) {
     return ActorListResponse(
       page: data['page'] as int?,
-      actorsResults: (data['actorsResults'] as List<dynamic>?)
-          ?.map((e) => ActorsResult.fromMap(e as Map<String, dynamic>))
+      actorResults: (data['ActorResults'] as List<dynamic>?)
+          ?.map((e) => ActorResult.fromMap(e as Map<String, dynamic>))
           .toList(),
       totalPages: data['total_pages'] as int?,
-      totalActorsResults: data['total_ActorsResults'] as int?,
+      totalActorResults: data['total_ActorResults'] as int?,
     );
   }
 
   Map<String, dynamic> toMap() => {
         'page': page,
-        'ActorsResults': actorsResults?.map((e) => e.toMap()).toList(),
+        'ActorResults': actorResults?.map((e) => e.toMap()).toList(),
         'total_pages': totalPages,
-        'total_ActorsResults': totalActorsResults,
+        'total_ActorResults': totalActorResults,
       };
 
   /// `dart:convert`
   ///
-  /// Parses the string and returns the ActorsResulting Json object as [ActorListResponse].
+  /// Parses the string and returns the ActorResulting Json object as [ActorListResponse].
   factory ActorListResponse.fromJson(String data) {
     return ActorListResponse.fromMap(json.decode(data) as Map<String, dynamic>);
   }

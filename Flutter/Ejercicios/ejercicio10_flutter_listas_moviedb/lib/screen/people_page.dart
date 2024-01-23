@@ -4,8 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 
 class ActorsPage extends StatefulWidget {
-
-  final List<ActorsResult> actorList;
+  final List<ActorResult> actorList;
 
   const ActorsPage({super.key, required this.actorList});
 
@@ -14,10 +13,9 @@ class ActorsPage extends StatefulWidget {
 }
 
 class _ActorsPageState extends State<ActorsPage> {
-
   bool _activado = true;
 
-   @override
+  @override
   void initState() {
     super.initState();
     _loadData();
@@ -31,20 +29,20 @@ class _ActorsPageState extends State<ActorsPage> {
     });
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Parkings Valencia'),
       ),
-      body: Skeletonizer(enabled: _activado,
-       child: ListView.builder(
-        itemCount: widget.actorList.length,
-        itemBuilder: (context, index) {
-          return PeopleListItem(actor: widget.actorList[index]);
-        },
-       )),
+      body: Skeletonizer(
+          enabled: _activado,
+          child: ListView.builder(
+            itemCount: widget.actorList.length,
+            itemBuilder: (context, index) {
+              return PeopleListItem(actor: widget.actorList[index]);
+            },
+          )),
     );
   }
 }
