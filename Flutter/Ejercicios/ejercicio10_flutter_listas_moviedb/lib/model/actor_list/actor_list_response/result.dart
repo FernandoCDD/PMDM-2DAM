@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'known_for.dart';
 
-class ActorResult {
+class Results {
   bool? adult;
   int? gender;
   int? id;
@@ -13,7 +13,7 @@ class ActorResult {
   String? profilePath;
   List<KnownFor>? knownFor;
 
-  ActorResult({
+  Results({
     this.adult,
     this.gender,
     this.id,
@@ -25,7 +25,7 @@ class ActorResult {
     this.knownFor,
   });
 
-  factory ActorResult.fromMap(Map<String, dynamic> data) => ActorResult(
+  factory Results.fromMap(Map<String, dynamic> data) => Results(
         adult: data['adult'] as bool?,
         gender: data['gender'] as int?,
         id: data['id'] as int?,
@@ -53,13 +53,13 @@ class ActorResult {
 
   /// `dart:convert`
   ///
-  /// Parses the string and returns the ActorResulting Json object as [ActorResult].
-  factory ActorResult.fromJson(String data) {
-    return ActorResult.fromMap(json.decode(data) as Map<String, dynamic>);
+  /// Parses the string and returns the Resultsing Json object as [Results].
+  factory Results.fromJson(String data) {
+    return Results.fromMap(json.decode(data) as Map<String, dynamic>);
   }
 
   /// `dart:convert`
   ///
-  /// Converts [ActorResult] to a JSON string.
+  /// Converts [Results] to a JSON string.
   String toJson() => json.encode(toMap());
 }

@@ -61,6 +61,7 @@ class _HomeScreenPageState extends State<HomeScreenPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('TheMovieDB'),
+        centerTitle: true,
       ),
       body: IndexedStack(
         index: _selectedIndex,
@@ -69,17 +70,18 @@ class _HomeScreenPageState extends State<HomeScreenPage> {
               future: actorList,
               builder: (context, snapshot) {
                 if (snapshot.hasData) {
-                  return ActorsPage(actorList: snapshot.data!.actorResults!);
+                  return ActorsPage(actorList: snapshot.data!.results!);
                 } else if (snapshot.hasError) {
                   return Text('${snapshot.error}');
                 }
                 return const CircularProgressIndicator();
               }),
+
           FutureBuilder<MovieListResponse>(
               future: movieList,
               builder: (context, snapshot) {
                 if (snapshot.hasData) {
-                  return const MoviePage();
+                  return MoviesPage(movieList: snapshot.data!.results!);
                 } else if (snapshot.hasError) {
                   return Text('${snapshot.error}');
                 }

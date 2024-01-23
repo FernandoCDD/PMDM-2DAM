@@ -10,12 +10,12 @@ class KnownFor {
   String? overview;
   String? posterPath;
   String? mediaType;
-  List<int>? genreIds;
+  List<dynamic>? genreIds;
   double? popularity;
   String? firstAirDate;
-  int? voteAverage;
+  double? voteAverage;
   int? voteCount;
-  List<String>? originCountry;
+  List<dynamic>? originCountry;
 
   KnownFor({
     this.adult,
@@ -45,12 +45,12 @@ class KnownFor {
         overview: data['overview'] as String?,
         posterPath: data['poster_path'] as String?,
         mediaType: data['media_type'] as String?,
-        genreIds: data['genre_ids'] as List<int>?,
+        genreIds: data['genre_ids'] as List<dynamic>?,
         popularity: (data['popularity'] as num?)?.toDouble(),
         firstAirDate: data['first_air_date'] as String?,
-        voteAverage: data['vote_average'] as int?,
+        voteAverage: (data['vote_average'] as num?)?.toDouble(),
         voteCount: data['vote_count'] as int?,
-        originCountry: data['origin_country'] as List<String>?,
+        originCountry: data['origin_country'] as List<dynamic>?,
       );
 
   Map<String, dynamic> toMap() => {

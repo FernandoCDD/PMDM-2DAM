@@ -1,25 +1,25 @@
-import 'package:ejercicio10_flutter_listas_moviedb/model/movie_list/results.dart';
+import 'results.dart';
 
 import 'dart:convert';
 
 class MovieListResponse {
   int? page;
-  List<MovieResults>? movie;
+  List<Results>? results;
   int? totalPages;
-  int? totalmovie;
+  int? totalResults;
 
-  MovieListResponse({this.page, this.movie, this.totalPages, this.totalmovie});
+  MovieListResponse({this.page, this.results, this.totalPages, this.totalResults});
 
   MovieListResponse.fromMap(Map<String, dynamic> json) {
     page = json['page'];
-    if (json['movie'] != null) {
-      movie = <MovieResults>[];
-      json['movie'].forEach((v) {
-        movie!.add(MovieResults.fromJson(v));
+    if (json['results'] != null) {
+      results = <Results>[];
+      json['results'].forEach((v) {
+        results!.add(Results.fromJson(v));
       });
     }
     totalPages = json['total_pages'];
-    totalmovie = json['total_movie'];
+    totalResults = json['total_results'];
   }
 
   factory MovieListResponse.fromJson(String data) {
@@ -27,12 +27,13 @@ class MovieListResponse {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = <String, dynamic>{};
-    data['page'] = page;
-    if (movie != null) {
-      data['movie'] = movie!.map((v) => v.toJson()).toList();
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['page'] = this.page;
+    if (this.results != null) {
+      data['results'] = this.results!.map((v) => v.toJson()).toList();
     }
-    data['total_pages'] = totalPages;
+    data['total_pages'] = this.totalPages;
+    data['total_results'] = this.totalResults;
     return data;
   }
 }

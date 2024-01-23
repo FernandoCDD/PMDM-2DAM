@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 
 class ActorsPage extends StatefulWidget {
-  final List<ActorResult> actorList;
+  final List<Results> actorList;
 
   const ActorsPage({super.key, required this.actorList});
 
@@ -33,7 +33,8 @@ class _ActorsPageState extends State<ActorsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Parkings Valencia'),
+        title: const Text('Actor List'),
+        centerTitle: true,
       ),
       body: Skeletonizer(
           enabled: _activado,

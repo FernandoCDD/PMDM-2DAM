@@ -2,7 +2,7 @@ import 'package:ejercicio10_flutter_listas_moviedb/model/actor_list/actor_list_r
 import 'package:flutter/material.dart';
 
 class PeopleListItem extends StatelessWidget {
-  final ActorResult actor;
+  final Results actor;
 
   const PeopleListItem({super.key, required this.actor});
 
@@ -22,21 +22,21 @@ class PeopleListItem extends StatelessWidget {
                 children: [
                   const Padding(padding: EdgeInsets.only(left: 10, top: 10)),
                   SizedBox(
-                    width: 100,
-                    height: 100,
+                    width: 130,
+                    height: 130,
                     child: Image.network(
                       'https://image.tmdb.org/t/p/w500${actor.profilePath}',
                       fit: BoxFit.cover,
                     ),
                   ),
-                  Expanded(
+                  Expanded(                 
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Text(
                           actor.name!,
-                          style: const TextStyle(fontWeight: FontWeight.bold),
+                          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
                         ),
                         Text(actor.knownForDepartment!),
                       ],
