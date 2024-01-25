@@ -8,7 +8,8 @@ class MovieListResponse {
   int? totalPages;
   int? totalResults;
 
-  MovieListResponse({this.page, this.results, this.totalPages, this.totalResults});
+  MovieListResponse(
+      {this.page, this.results, this.totalPages, this.totalResults});
 
   MovieListResponse.fromMap(Map<String, dynamic> json) {
     page = json['page'];

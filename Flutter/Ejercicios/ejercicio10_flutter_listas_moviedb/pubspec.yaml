@@ -37,6 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   skeletonizer: ^1.0.1
   http: ^1.2.0
+  transparent_image: ^2.0.1
+  youtube_player_flutter: ^8.1.2
 
 dev_dependencies:
   flutter_test:

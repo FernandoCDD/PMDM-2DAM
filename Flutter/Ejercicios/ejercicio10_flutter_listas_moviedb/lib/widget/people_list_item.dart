@@ -29,14 +29,15 @@ class PeopleListItem extends StatelessWidget {
                       fit: BoxFit.cover,
                     ),
                   ),
-                  Expanded(                 
+                  Expanded(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Text(
                           actor.name!,
-                          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+                          style: const TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 30),
                         ),
                         Text(actor.knownForDepartment!),
                       ],

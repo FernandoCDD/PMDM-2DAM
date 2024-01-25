@@ -76,7 +76,6 @@ class _HomeScreenPageState extends State<HomeScreenPage> {
                 }
                 return const CircularProgressIndicator();
               }),
-
           FutureBuilder<MovieListResponse>(
               future: movieList,
               builder: (context, snapshot) {
